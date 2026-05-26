@@ -3,9 +3,11 @@ theme = 'hugo-book'
 title = '라임미플의 보드게임 비밀기지' 
 
 defaultContentLanguage = 'ko'
+hasCJKLanguage = true
 
 [languages]
   [languages.ko]
     languageName = '한국어'
     contentDir = 'content'
     weight = 1
+    lang = 'ko'
