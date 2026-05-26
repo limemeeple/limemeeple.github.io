@@ -2,7 +2,7 @@ baseURL = 'https://limemeeple.github.io/'
 theme = 'hugo-book'
 title = '라임미플의 보드게임 비밀기지' 
 
-defaultContentLanguage = 'ko'
+defaultContentLanguage = 'en'
 hasCJKLanguage = true
 
 [languages]
@@ -10,4 +10,3 @@ hasCJKLanguage = true
     languageName = '한국어'
     contentDir = 'content'
     weight = 1
-    lang = 'ko'
