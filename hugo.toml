@@ -1,4 +1,11 @@
 baseURL = 'https://limemeeple.github.io/'
-locale = 'en-us'
-title = 'My New Hugo Project'
-theme = "hugo-book" 
+theme = 'hugo-book'
+title = '라임미플의 보드게임 비밀기지' 
+
+defaultContentLanguage = 'ko'
+
+[languages]
+  [languages.ko]
+    languageName = '한국어'
+    contentDir = 'content'
+    weight = 1
