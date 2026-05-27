@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>홈페이지 on LimeMeeple</title>
     <link>http://localhost:1313/docs/</link>
     <description>Recent content in 홈페이지 on LimeMeeple</description>
+=======
+    <title>Docs on LimeMeeple</title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on LimeMeeple</description>
+>>>>>>> 79f1acb72f98086da2ac4928c8171069d05c4059
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Tue, 26 May 2026 22:42:36 +0900</lastBuildDate>
