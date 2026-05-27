@@ -14,8 +14,4 @@ googleAnalytics = "G-B577GZKLR0"
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-<<<<<<< HEAD
       unsafe = true
-=======
-      unsafe = true
->>>>>>> 79f1acb72f98086da2ac4928c8171069d05c4059
