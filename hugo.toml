@@ -1,6 +1,17 @@
 baseURL = 'https://limemeeple.github.io/'
 theme = 'hugo-book'
-title = '라임미플의 보드게임 비밀기지'
+title = 'LimeMeeple'
 
-LanguageCode = 'ko-kr'
+locale = 'ko-kr'
 defaultContentLanguage = 'ko'
+
+[params]
+googleAnalytics = "G-B577GZKLR0"
+
+[params.BookMenu]
+    profileImage = "/images/logo_img.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

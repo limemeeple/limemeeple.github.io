@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🔥 웨이트 3점대 게임들 on LimeMeeple</title>
+    <link>http://localhost:1313/docs/boardgame/weigt3/</link>
+    <description>Recent content in 🔥 웨이트 3점대 게임들 on LimeMeeple</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/boardgame/weigt3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📄 기계어</title>
+      <link>http://localhost:1313/docs/boardgame/weigt3/agricola/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/boardgame/weigt3/agricola/</guid>
+      <description>&lt;div class=&#34;book-markdown&#34;&gt;&#xA;&lt;header style=&#34;margin-bottom: 2rem;&#34;&gt;&#xA;&lt;h1 style=&#34;color: #2c3e50; font-size: 2rem; margin-bottom: 0.5rem;&#34;&gt;🤖 컴퓨터의 모국어, 기계어(Machine Language) 이해하기&lt;/h1&gt;&#xA;&lt;p style=&#34;color: #7f8c8d; font-size: 1.1rem; font-style: italic; margin-top: 0;&#34;&gt;0과 1로 이루어진 미지의 세계&lt;/p&gt;&#xA;&lt;/header&gt;&#xA;&lt;hr style=&#34;border: 0; height: 1px; background: #e0e0e0; margin: 1.5rem 0;&#34;&gt;&#xA;&lt;section style=&#34;margin-bottom: 2rem;&#34;&gt;&#xA;&lt;h3 style=&#34;color: #2c3e50; margin-bottom: 1rem;&#34;&gt;1. 기계어란 무엇인가요?&lt;/h3&gt;&#xA;&lt;p style=&#34;line-height: 1.8;&#34;&gt;&#xA;&lt;strong&gt;기계어(Machine Language)&lt;/strong&gt;는 컴퓨터의 두뇌인 CPU가 별도의 번역 과정 없이 &#xA;&lt;span style=&#34;background-color: #e8f5e9; color: #1b5e20; padding: 2px 6px; border-radius: 4px; font-weight: bold;&#34;&gt;최종적으로 직접 이해하고 실행할 수 있는 유일한 프로그래밍 언어&lt;/span&gt;입니다. &#xA;모든 데이터와 명령어가 오직 &lt;strong&gt;0과 1(이진수, Binary)&lt;/strong&gt;로만 이루어져 있는 것이 특징입니다.&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 🤖 컴퓨터의 모국어, 기계어(Machine Language) 이해하기 0과 1로 이루어진 미지의 세계
+1. 기계어란 무엇인가요? 기계어(Machine Language)는 컴퓨터의 두뇌인 CPU가 별도의 번역 과정 없이 최종적으로 직접 이해하고 실행할 수 있는 유일한 프로그래밍 언어입니다. 모든 데이터와 명령어가 오직 0과 1(이진수, Binary)로만 이루어져 있는 것이 특징입니다. ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" /><meta property="og:url" content="http://localhost:1313/docs/aieducation/1week/computers/machinelanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/">
+  <meta property="og:site_name" content="LimeMeeple">
+  <meta property="og:title" content="기계어">
+  <meta property="og:description" content="🤖 컴퓨터의 모국어, 기계어(Machine Language) 이해하기 0과 1로 이루어진 미지의 세계
+1. 기계어란 무엇인가요? 기계어(Machine Language)는 컴퓨터의 두뇌인 CPU가 별도의 번역 과정 없이 최종적으로 직접 이해하고 실행할 수 있는 유일한 프로그래밍 언어입니다. 모든 데이터와 명령어가 오직 0과 1(이진수, Binary)로만 이루어져 있는 것이 특징입니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2026-05-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-27T00:00:00+00:00">
+
+
+  <meta itemprop="name" content="기계어">
+  <meta itemprop="description" content="🤖 컴퓨터의 모국어, 기계어(Machine Language) 이해하기 0과 1로 이루어진 미지의 세계
+1. 기계어란 무엇인가요? 기계어(Machine Language)는 컴퓨터의 두뇌인 CPU가 별도의 번역 과정 없이 최종적으로 직접 이해하고 실행할 수 있는 유일한 프로그래밍 언어입니다. 모든 데이터와 명령어가 오직 0과 1(이진수, Binary)로만 이루어져 있는 것이 특징입니다.">
+  <meta itemprop="datePublished" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="wordCount" content="190">
+
+<title>기계어 • LimeMeeple</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/aieducation/1week/computers/machinelanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/">
+<link rel="stylesheet" href="/book.min.842c8bfb395e40ff1cacfb22ac2934e30d2df774ebfc23bf2936815666c035d4.css" integrity="sha256-hCyL&#43;zleQP8crPsirCk04w0t93Tr/CO/KTaBVmbANdQ=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/ko.search.min.c131b441c044ba6e33a2683536354efaa05f87232779ec65e72e01d96797605f.js" integrity="sha256-wTG0QcBEum4zomg1NjVO&#43;qBfhyMneexl5y4B2WeXYF8=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<div class="sidebar-profile">
+  <div class="profile-img-wrap">
+    <a href="http://localhost:1313/">
+      <img src="/images/logo_img.png" alt="Profile" class="profile-img" />
+    </a>
+  </div>
+</div>
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>LimeMeeple</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="toggle" checked />
+    <label for="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="flex">
+      <a role="button" class="">
+        2026 이어드림 기초</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b48d51000f14f13244cbebf278d4f71" class="toggle" checked />
+    <label for="section-7b48d51000f14f13244cbebf278d4f71" class="flex">
+      <a role="button" class="">
+        1주차</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-668222efdc145866dcd09af1ad27afe4" class="toggle" checked />
+    <label for="section-668222efdc145866dcd09af1ad27afe4" class="flex">
+      <a role="button" class="">
+        컴퓨터의 이해</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/machinelanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/" class="active">
+      기계어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/machinelanguage/" class="">
+      기계어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c42abbd39d09d25762c2a911a583d1c4" class="toggle"  />
+    <label for="section-c42abbd39d09d25762c2a911a583d1c4" class="flex">
+      <a role="button" class="">
+        책 정보 수집 미션</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/book_collection/book/" class="">
+      내가 고른 첫 번째 추천 책</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="toggle"  />
+    <label for="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="flex">
+      <a role="button" class="">
+        보드게임 이야기</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb7be7952ef998f309f58aeacdb16ad" class="toggle"  />
+    <label for="section-0eb7be7952ef998f309f58aeacdb16ad" class="flex">
+      <a role="button" class="">
+        🤯 웨이트 4점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-216f1e61378fd271c1c816475104e6f5" class="toggle"  />
+    <label for="section-216f1e61378fd271c1c816475104e6f5" class="flex">
+      <a role="button" class="">
+        🔥 웨이트 3점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2ff22bc4bf7395c100e2312dfc927e59" class="toggle"  />
+    <label for="section-2ff22bc4bf7395c100e2312dfc927e59" class="flex">
+      <a role="button" class="">
+        🧠 웨이트 2점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a92bc1afc3f4c93d2734144aefb281ab" class="toggle"  />
+    <label for="section-a92bc1afc3f4c93d2734144aefb281ab" class="flex">
+      <a role="button" class="">
+        🌱 기타 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B577GZKLR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B577GZKLR0');
+</script>
+
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>기계어</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><div class="book-markdown">
+<header style="margin-bottom: 2rem;">
+<h1 style="color: #2c3e50; font-size: 2rem; margin-bottom: 0.5rem;">🤖 컴퓨터의 모국어, 기계어(Machine Language) 이해하기</h1>
+<p style="color: #7f8c8d; font-size: 1.1rem; font-style: italic; margin-top: 0;">0과 1로 이루어진 미지의 세계</p>
+</header>
+<hr style="border: 0; height: 1px; background: #e0e0e0; margin: 1.5rem 0;">
+<section style="margin-bottom: 2rem;">
+<h3 style="color: #2c3e50; margin-bottom: 1rem;">1. 기계어란 무엇인가요?</h3>
+<p style="line-height: 1.8;">
+<strong>기계어(Machine Language)</strong>는 컴퓨터의 두뇌인 CPU가 별도의 번역 과정 없이 
+<span style="background-color: #e8f5e9; color: #1b5e20; padding: 2px 6px; border-radius: 4px; font-weight: bold;">최종적으로 직접 이해하고 실행할 수 있는 유일한 프로그래밍 언어</span>입니다. 
+모든 데이터와 명령어가 오직 <strong>0과 1(이진수, Binary)</strong>로만 이루어져 있는 것이 특징입니다.
+</p>
+<p style="line-height: 1.8;">
+우리가 자주 쓰는 JAVA, Python 같은 고급 언어들은 인간이 이해하기 쉽게 만들어진 언어이기 때문에, 
+컴퓨터가 이를 실행하려면 결국 컴파일러(Compiler) 등을 거쳐 최종적으로 이 기계어로 번역되어야만 합니다.
+</p>
+</section>
+<div class="book-hint info" style="padding: 1.25rem; border-left: 0.25rem solid #007bff; background-color: #f8f9fa; border-radius: 0.25rem; margin-bottom: 2rem;">
+<h4 style="margin-top: 0; margin-bottom: 0.75rem; color: #007bff;">💡 기계어의 주요 특징</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.7;">
+<li style="margin-bottom: 0.5rem;"><strong>컴퓨터 친화적:</strong> 별도의 번역 프로세스가 없기 때문에 실행 속도가 가장 빠릅니다.</li>
+<li style="margin-bottom: 0.5rem;"><strong>인간 비친화적:</strong> 사람이 읽고 쓰기에 극도로 어렵습니다. 오타가 나도 찾아내기가 거의 불가능에 가깝습니다.</li>
+<li style="margin-bottom: 0px;"><strong>하드웨어 의존성:</strong> CPU의 제조사나 아키텍처(Intel, AMD, ARM 등)에 따라 기계어의 형태가 다릅니다. 즉, A 컴퓨터에서 돌아가는 기계어가 B 컴퓨터에서는 실행되지 않을 수 있습니다.</li>
+</ul>
+</div>
+<hr style="border: 0; height: 1px; background: #e0e0e0; margin: 1.5rem 0;">
+<section style="margin-bottom: 2rem;">
+<h3 style="color: #2c3e50; margin-bottom: 0.5rem;">2. 코드로 비교하는 언어의 발전</h3>
+<p style="color: #7f8c8d; margin-bottom: 1.5rem;">화면에 간단한 연산을 처리할 때, 언어의 발전 단계에 따라 컴퓨터가 받아들이는 모습입니다.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+<div style="background: #fdfdfd; border: 1px solid #e1e4e8; border-radius: 6px; padding: 1rem;">
+<h4 style="margin-top: 0; color: #4a5568;">🙋‍♂️ 고급 언어 (JAVA)</h4>
+<pre style="background: #2d3748; color: #fff; padding: 0.75rem; border-radius: 4px; overflow-x: auto;"><code style="font-family: monospace;">int a = 5;
+int b = 10;
+int result = a + b;</code></pre>
+<span style="font-size: 0.85rem; color: #718096;">인간이 직관적으로 이해할 수 있는 형태</span>
+</div>
+<div style="background: #fdfdfd; border: 1px solid #e1e4e8; border-radius: 6px; padding: 1rem;">
+<h4 style="margin-top: 0; color: #4a5568;">⚙️ 어셈블리어 (Assembly)</h4>
+<pre style="background: #2d3748; color: #fff; padding: 0.75rem; border-radius: 4px; overflow-x: auto;"><code style="font-family: monospace;">MOV AX, 5
+ADD AX, 10</code></pre>
+<span style="font-size: 0.85rem; color: #718096;">기계어와 1:1 매핑되는 징검다리 언어</span>
+</div>
+<div style="background: #fdfdfd; border: 1px solid #e1e4e8; border-radius: 6px; padding: 1rem;">
+<h4 style="margin-top: 0; color: #2b6cb0;">💻 최종 기계어 (Machine Code)</h4>
+<pre style="background: #1a202c; color: #63b3ed; padding: 0.75rem; border-radius: 4px; overflow-x: auto;"><code style="font-family: monospace;">10110000 00000101
+00000100 00001010</code></pre>
+<span style="font-size: 0.85rem; color: #4a5568;">CPU가 직접 실행하는 0과 1의 조합</span>
+</div>
+</div>
+</section>
+</div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>홈페이지</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/aieducation/1week/computers/machinelanguage/" class="flex align-center">
+        <span>기계어</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

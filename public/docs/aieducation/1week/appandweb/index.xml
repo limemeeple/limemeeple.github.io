@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>📂 앱/웹 서비스를 위한 모든 것 on LimeMeeple</title>
+    <link>http://localhost:1313/docs/aieducation/1week/appandweb/</link>
+    <description>Recent content in 📂 앱/웹 서비스를 위한 모든 것 on LimeMeeple</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <atom:link href="http://localhost:1313/docs/aieducation/1week/appandweb/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

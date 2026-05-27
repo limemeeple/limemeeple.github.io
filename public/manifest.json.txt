@@ -1,0 +1,8 @@
+{
+  "name": "라임미플의 보드게임 비밀기지",
+  "short_name": "라임미플 블로그",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

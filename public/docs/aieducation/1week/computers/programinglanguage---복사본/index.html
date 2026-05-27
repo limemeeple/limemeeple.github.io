@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 💻 프로그래밍 언어와 아키텍처의 이해 개발자의 기본 소양 다지기
+1. 프로그래밍 언어란? 프로그래밍 언어(Programming Language)는 인간이 컴퓨터에게 특정 작업을 수행하도록 명령을 내리기 위해 사용하는 인간과 컴퓨터 사이의 의사소통 수단입니다. 컴퓨터는 본질적으로 0과 1(기계어)밖에 이해하지 못하지만, 사람은 0과 1로 복잡한 논리를 작성하기 어렵습니다. 따라서 프로그래밍 언어는 사람이 이해하기 쉬운 문법으로 코드를 작성하면, 이를 컴퓨터가 이해할 수 있는 신호로 번역(컴파일 또는 인터프리트)해 주는 역할을 합니다. ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" /><meta property="og:url" content="http://localhost:1313/docs/aieducation/1week/computers/programinglanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/">
+  <meta property="og:site_name" content="LimeMeeple">
+  <meta property="og:title" content="프로그래밍 언어">
+  <meta property="og:description" content="💻 프로그래밍 언어와 아키텍처의 이해 개발자의 기본 소양 다지기
+1. 프로그래밍 언어란? 프로그래밍 언어(Programming Language)는 인간이 컴퓨터에게 특정 작업을 수행하도록 명령을 내리기 위해 사용하는 인간과 컴퓨터 사이의 의사소통 수단입니다. 컴퓨터는 본질적으로 0과 1(기계어)밖에 이해하지 못하지만, 사람은 0과 1로 복잡한 논리를 작성하기 어렵습니다. 따라서 프로그래밍 언어는 사람이 이해하기 쉬운 문법으로 코드를 작성하면, 이를 컴퓨터가 이해할 수 있는 신호로 번역(컴파일 또는 인터프리트)해 주는 역할을 합니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2026-05-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-27T00:00:00+00:00">
+
+
+  <meta itemprop="name" content="프로그래밍 언어">
+  <meta itemprop="description" content="💻 프로그래밍 언어와 아키텍처의 이해 개발자의 기본 소양 다지기
+1. 프로그래밍 언어란? 프로그래밍 언어(Programming Language)는 인간이 컴퓨터에게 특정 작업을 수행하도록 명령을 내리기 위해 사용하는 인간과 컴퓨터 사이의 의사소통 수단입니다. 컴퓨터는 본질적으로 0과 1(기계어)밖에 이해하지 못하지만, 사람은 0과 1로 복잡한 논리를 작성하기 어렵습니다. 따라서 프로그래밍 언어는 사람이 이해하기 쉬운 문법으로 코드를 작성하면, 이를 컴퓨터가 이해할 수 있는 신호로 번역(컴파일 또는 인터프리트)해 주는 역할을 합니다.">
+  <meta itemprop="datePublished" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="wordCount" content="321">
+
+<title>프로그래밍 언어 • LimeMeeple</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/aieducation/1week/computers/programinglanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/">
+<link rel="stylesheet" href="/book.min.842c8bfb395e40ff1cacfb22ac2934e30d2df774ebfc23bf2936815666c035d4.css" integrity="sha256-hCyL&#43;zleQP8crPsirCk04w0t93Tr/CO/KTaBVmbANdQ=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/ko.search.min.c131b441c044ba6e33a2683536354efaa05f87232779ec65e72e01d96797605f.js" integrity="sha256-wTG0QcBEum4zomg1NjVO&#43;qBfhyMneexl5y4B2WeXYF8=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<div class="sidebar-profile">
+  <div class="profile-img-wrap">
+    <a href="http://localhost:1313/">
+      <img src="/images/logo_img.png" alt="Profile" class="profile-img" />
+    </a>
+  </div>
+</div>
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>LimeMeeple</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="toggle" checked />
+    <label for="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="flex">
+      <a role="button" class="">
+        2026 이어드림 기초</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b48d51000f14f13244cbebf278d4f71" class="toggle" checked />
+    <label for="section-7b48d51000f14f13244cbebf278d4f71" class="flex">
+      <a role="button" class="">
+        1주차</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-668222efdc145866dcd09af1ad27afe4" class="toggle" checked />
+    <label for="section-668222efdc145866dcd09af1ad27afe4" class="flex">
+      <a role="button" class="">
+        컴퓨터의 이해</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/machinelanguage/" class="">
+      기계어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/programinglanguage---%EB%B3%B5%EC%82%AC%EB%B3%B8/" class="active">
+      프로그래밍 언어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/programinglanguage/" class="">
+      프로그래밍 언어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c42abbd39d09d25762c2a911a583d1c4" class="toggle"  />
+    <label for="section-c42abbd39d09d25762c2a911a583d1c4" class="flex">
+      <a role="button" class="">
+        책 정보 수집 미션</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/book_collection/book/" class="">
+      내가 고른 첫 번째 추천 책</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="toggle"  />
+    <label for="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="flex">
+      <a role="button" class="">
+        보드게임 이야기</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb7be7952ef998f309f58aeacdb16ad" class="toggle"  />
+    <label for="section-0eb7be7952ef998f309f58aeacdb16ad" class="flex">
+      <a role="button" class="">
+        🤯 웨이트 4점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-216f1e61378fd271c1c816475104e6f5" class="toggle"  />
+    <label for="section-216f1e61378fd271c1c816475104e6f5" class="flex">
+      <a role="button" class="">
+        🔥 웨이트 3점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2ff22bc4bf7395c100e2312dfc927e59" class="toggle"  />
+    <label for="section-2ff22bc4bf7395c100e2312dfc927e59" class="flex">
+      <a role="button" class="">
+        🧠 웨이트 2점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a92bc1afc3f4c93d2734144aefb281ab" class="toggle"  />
+    <label for="section-a92bc1afc3f4c93d2734144aefb281ab" class="flex">
+      <a role="button" class="">
+        🌱 기타 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B577GZKLR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B577GZKLR0');
+</script>
+
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>프로그래밍 언어</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><div class="book-markdown">
+<header style="margin-bottom: 2rem;">
+<h1 style="color: #2c3e50; font-size: 2rem; margin-bottom: 0.5rem;">💻 프로그래밍 언어와 아키텍처의 이해</h1>
+<p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 0;">개발자의 기본 소양 다지기</p>
+</header>
+<hr style="border: 0; height: 1px; background: #e0e0e0; margin: 1.5rem 0;">
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #2e7d32; border-left: 4px solid #2e7d32; padding-left: 10px; font-size: 1.4rem;">1. 프로그래밍 언어란?</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">
+<strong>프로그래밍 언어(Programming Language)</strong>는 인간이 컴퓨터에게 특정 작업을 수행하도록 명령을 내리기 위해 사용하는 <span style="background-color: #e8f5e9; color: #1b5e20; padding: 2px 6px; border-radius: 4px; font-weight: bold;">인간과 컴퓨터 사이의 의사소통 수단</span>입니다.
+</p>
+<p style="line-height: 1.8;">
+컴퓨터는 본질적으로 0과 1(기계어)밖에 이해하지 못하지만, 사람은 0과 1로 복잡한 논리를 작성하기 어렵습니다. 따라서 프로그래밍 언어는 사람이 이해하기 쉬운 문법으로 코드를 작성하면, 이를 컴퓨터가 이해할 수 있는 신호로 번역(컴파일 또는 인터프리트)해 주는 역할을 합니다.
+</p>
+</section>
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #2e7d32; border-left: 4px solid #2e7d32; padding-left: 10px; font-size: 1.4rem;">2. 프로그래밍 언어의 종류</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">용도와 구동 환경에 따라 다양한 언어가 존재하며, 대표적으로 다음과 같이 분류할 수 있습니다.</p>
+<ul style="line-height: 1.8; padding-left: 1.5rem;">
+<li style="margin-bottom: 0.5rem;"><strong>JAVA:</strong> 기업형 애플리해케이션 및 웹 백엔드 개발에 가장 널리 쓰이는 객체지향 언어입니다. JVM 덕분에 플랫폼 독립적입니다.</li>
+<li style="margin-bottom: 0.5rem;"><strong>JavaScript:</strong> 웹 브라우저를 움직이게 하는 프론트엔드 필수 언어이며, Node.js의 등장으로 서버 개발까지 영역을 확장했습니다.</li>
+<li style="margin-bottom: 0.5rem;"><strong>Python:</strong> 문법이 간결하여 학습 능률이 높고, 데이터 분석, 인공지능(AI), 머신러닝 분야에서 독점적인 위치를 차지하고 있습니다.</li>
+<li style="margin-bottom: 0.5rem;"><strong>C / C++:</strong> 하드웨어를 직접 제어할 수 있을 만큼 강력하며, 운영체제(OS), 임베디드, 고성능 게임 엔진 개발에 쓰입니다.</li>
+</ul>
+</section>
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #2e7d32; border-left: 4px solid #2e7d32; padding-left: 10px; font-size: 1.4rem;">3. 저급 언어(Low-Level) vs 고급 언어(High-Level) 비교</h3>
+<div style="overflow-x: auto; margin-top: 1.2rem;">
+<table style="width: 100%; border-collapse: collapse; text-align: left; line-height: 1.6;">
+<thead>
+<tr style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+<th style="padding: 12px; color: #495057;">구분</th>
+<th style="padding: 12px; color: #495057;">저급 언어 (Low-Level Language)</th>
+<th style="padding: 12px; color: #495057;">고급 언어 (High-Level Language)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #dee2e6;">
+<td style="padding: 12px; font-weight: bold; background-color: #fdfdfd;">대표 언어</td>
+<td style="padding: 12px;">기계어, 어셈블리어</td>
+<td style="padding: 12px;">JAVA, Python, C, C++, JavaScript 등</td>
+</tr>
+<tr style="border-bottom: 1px solid #dee2e6;">
+<td style="padding: 12px; font-weight: bold; background-color: #fdfdfd;">인간의 이해도</td>
+<td style="padding: 12px; color: #dc3545;">매우 어려움 (이진수 및 하드웨어 명령어 위주)</td>
+<td style="padding: 12px; color: #28a745;">매우 쉬움 (인간의 언어 문법과 유사)</td>
+</tr>
+<tr style="border-bottom: 1px solid #dee2e6;">
+<td style="padding: 12px; font-weight: bold; background-color: #fdfdfd;">컴퓨터의 이해도</td>
+<td style="padding: 12px; color: #28a745;">번역 없이 바로 이해하거나 번역이 매우 빠름</td>
+<td style="padding: 12px; color: #dc3545;">컴파일러/인터프리터 등의 번역 과정 필수</td>
+</tr>
+<tr style="border-bottom: 1px solid #dee2e6;">
+<td style="padding: 12px; font-weight: bold; background-color: #fdfdfd;">실행 속도</td>
+<td style="padding: 12px;">하드웨어 최적화가 가능하여 압도적으로 빠름</td>
+<td style="padding: 12px;">번역 오버헤드 및 가상머신 구동으로 비교적 느림</td>
+</tr>
+<tr style="border-bottom: 1px solid #dee2e6;">
+<td style="padding: 12px; font-weight: bold; background-color: #fdfdfd;">생산성</td>
+<td style="padding: 12px;">매우 낮음 (코드 작성이 복잡하고 유지보수가 난해)</td>
+<td style="padding: 12px;">매우 높음 (가독성이 좋고 풍부한 라이브러리 지원)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #2e7d32; border-left: 4px solid #2e7d32; padding-left: 10px; font-size: 1.4rem;">4. 클라이언트(Client)와 서버(Server) 구조</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">
+우리가 인터넷을 이용할 때 일어나는 모든 상호작용은 <strong>클라이언트와 서버의 요청 및 응답 모델</strong>로 이루어집니다.
+</p>
+<div style="background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+<div style="display: flex; justify-content: space-around; width: 100%; max-width: 600px; text-align: center; flex-wrap: wrap; gap: 1rem;">
+<div style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 6px; padding: 1rem; width: 160px;">
+<span style="font-size: 1.5rem;">📱 / 💻</span>
+<h5 style="margin: 0.5rem 0 0 0; color: #1565c0;">클라이언트 (Client)</h5>
+<p style="font-size: 0.8rem; margin: 0.2rem 0 0 0; color: #546e7a;">웹 브라우저, 앱<br>(요청을 보내는 곳)</p>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: center; font-size: 0.9rem; color: #455a64; font-weight: bold;">
+<div style="border-bottom: 2px dashed #78909c; padding: 0 10px;">요청 (Request) ➡️</div>
+<div style="padding: 0 10px;">⬅️ 응답 (Response)</div>
+</div>
+<div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 6px; padding: 1rem; width: 160px;">
+<span style="font-size: 1.5rem;">🖥️ / 🗄️</span>
+<h5 style="margin: 0.5rem 0 0 0; color: #e65100;">서버 (Server)</h5>
+<p style="font-size: 0.8rem; margin: 0.2rem 0 0 0; color: #546e7a;">데이터베이스, API 서버<br>(요청을 처리하는 곳)</p>
+</div>
+</div>
+<small style="color: #78909c; font-size: 0.85rem;">[웹 서비스 아키텍처: 클라이언트와 서버의 데이터 교환 흐름도]</small>
+</div>
+<ul style="line-height: 1.8; padding-left: 1.5rem;">
+<li style="margin-bottom: 0.5rem;"><strong>클라이언트(Client):</strong> 서비스를 이용하는 고객을 뜻합니다. 크롬 브라우저, 스마트폰 앱 등이 여기에 해당하며, 서버에 필요한 데이터(예: 로그인 요청, 게시글 조회)를 <strong>요청(Request)</strong>합니다.</li>
+<li style="margin-bottom: 0px;"><strong>서버(Server):</strong> 서비스를 제공(Serve)하는 컴퓨터입니다. 클라이언트의 요청을 받아 유효한지 검증하고, 데이터베이스에서 필요한 데이터를 찾아 가공한 뒤 다시 클라이언트에게 <strong>응답(Response)</strong>해 주는 역할을 수행합니다.</li>
+</ul>
+</section>
+</div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/aieducation/1week/computers/machinelanguage/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>기계어</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/aieducation/1week/computers/programinglanguage/" class="flex align-center">
+        <span>프로그래밍 언어</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 🧠 컴퓨터의 지휘자, 운영체제(Operating System)의 이해 하드웨어와 소프트웨어를 연결하는 핵심 아키텍처
+1. 운영체제(OS)란 무엇인가요? 운영체제(Operating System, OS)는 사용자가 컴퓨터 하드웨어를 효율적으로 사용할 수 있도록 관리하고 통제하는 가장 핵심적인 시스템 소프트웨어입니다. ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" /><meta property="og:url" content="http://localhost:1313/docs/aieducation/1week/computers/os/">
+  <meta property="og:site_name" content="LimeMeeple">
+  <meta property="og:title" content="📄 운영체제">
+  <meta property="og:description" content="🧠 컴퓨터의 지휘자, 운영체제(Operating System)의 이해 하드웨어와 소프트웨어를 연결하는 핵심 아키텍처
+1. 운영체제(OS)란 무엇인가요? 운영체제(Operating System, OS)는 사용자가 컴퓨터 하드웨어를 효율적으로 사용할 수 있도록 관리하고 통제하는 가장 핵심적인 시스템 소프트웨어입니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2026-05-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-27T00:00:00+00:00">
+
+
+  <meta itemprop="name" content="📄 운영체제">
+  <meta itemprop="description" content="🧠 컴퓨터의 지휘자, 운영체제(Operating System)의 이해 하드웨어와 소프트웨어를 연결하는 핵심 아키텍처
+1. 운영체제(OS)란 무엇인가요? 운영체제(Operating System, OS)는 사용자가 컴퓨터 하드웨어를 효율적으로 사용할 수 있도록 관리하고 통제하는 가장 핵심적인 시스템 소프트웨어입니다.">
+  <meta itemprop="datePublished" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-05-27T00:00:00+00:00">
+  <meta itemprop="wordCount" content="302">
+
+<title>📄 운영체제 • LimeMeeple</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/aieducation/1week/computers/os/">
+<link rel="stylesheet" href="/book.min.b1af5d57caab509dbeab9068ae04e4201a127ed91f8743f9c5d9963e590e864f.css" integrity="sha256-sa9dV8qrUJ2&#43;q5BorgTkIBoSftkfh0P5xdmWPlkOhk8=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/ko.search.min.d8f58e99946201eb6d03dad8e835f254f2c80f0291e38a2755bff2738eb39134.js" integrity="sha256-2PWOmZRiAettA9rY6DXyVPLIDwKR44onVb/yc46zkTQ=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<div class="sidebar-profile">
+  <div class="profile-img-wrap">
+    <a href="http://localhost:1313/">
+      <img src="/images/logo_img.png" alt="Profile" class="profile-img" />
+    </a>
+  </div>
+</div>
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>LimeMeeple</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="toggle" checked />
+    <label for="section-3dd57ee6eb8c99dfeb9153e3d72fbd0b" class="flex">
+      <a role="button" class="">
+        💻 2026 이어드림 기초</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b48d51000f14f13244cbebf278d4f71" class="toggle" checked />
+    <label for="section-7b48d51000f14f13244cbebf278d4f71" class="flex">
+      <a role="button" class="">
+        📅 1주차</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-668222efdc145866dcd09af1ad27afe4" class="toggle" checked />
+    <label for="section-668222efdc145866dcd09af1ad27afe4" class="flex">
+      <a role="button" class="">
+        📂 컴퓨터의 이해</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/machinelanguage/" class="">
+      📄 기계어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/programinglanguage/" class="">
+      📄 프로그래밍 언어</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/1week/computers/os/" class="active">
+      📄 운영체제</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c2c5f125cb2119ecfa4d9c0092c6befb" class="toggle"  />
+    <label for="section-c2c5f125cb2119ecfa4d9c0092c6befb" class="flex">
+      <a role="button" class="">
+        📂 앱/웹 서비스를 위한 모든 것</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c42abbd39d09d25762c2a911a583d1c4" class="toggle"  />
+    <label for="section-c42abbd39d09d25762c2a911a583d1c4" class="flex">
+      <a role="button" class="">
+        ⚔️ 책 정보 수집 미션</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/aieducation/book_collection/book/" class="">
+      내가 고른 첫 번째 추천 책</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="toggle"  />
+    <label for="section-a3d07f43fa2cde31ed5dc655c36dddc6" class="flex">
+      <a role="button" class="">
+        🎲 보드게임 이야기</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb7be7952ef998f309f58aeacdb16ad" class="toggle"  />
+    <label for="section-0eb7be7952ef998f309f58aeacdb16ad" class="flex">
+      <a role="button" class="">
+        🤯 웨이트 4점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-216f1e61378fd271c1c816475104e6f5" class="toggle"  />
+    <label for="section-216f1e61378fd271c1c816475104e6f5" class="flex">
+      <a role="button" class="">
+        🔥 웨이트 3점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/boardgame/weigt3/agricola/" class="">
+      🌾 아그리콜라</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2ff22bc4bf7395c100e2312dfc927e59" class="toggle"  />
+    <label for="section-2ff22bc4bf7395c100e2312dfc927e59" class="flex">
+      <a role="button" class="">
+        🧠 웨이트 2점대 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a92bc1afc3f4c93d2734144aefb281ab" class="toggle"  />
+    <label for="section-a92bc1afc3f4c93d2734144aefb281ab" class="flex">
+      <a role="button" class="">
+        🌱 기타 게임들</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <meta name="google-site-verification" content="UkZCAGFEtQufKIzfBb35pZWcgEH8EOES1Y_gt1cP96U" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B577GZKLR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B577GZKLR0');
+</script>
+
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>📄 운영체제</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><div class="book-markdown">
+<header style="margin-bottom: 2rem;">
+<h1 style="color: #2c3e50; font-size: 2rem; margin-bottom: 0.5rem;">🧠 컴퓨터의 지휘자, 운영체제(Operating System)의 이해</h1>
+<p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 0;">하드웨어와 소프트웨어를 연결하는 핵심 아키텍처</p>
+</header>
+<hr style="border: 0; height: 1px; background: #e0e0e0; margin: 1.5rem 0;">
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #1e3a8a; border-left: 4px solid #1e3a8a; padding-left: 10px; font-size: 1.4rem;">1. 운영체제(OS)란 무엇인가요?</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">
+<strong>운영체제(Operating System, OS)</strong>는 사용자가 컴퓨터 하드웨어를 효율적으로 사용할 수 있도록 관리하고 통제하는 <span style="background-color: #eff6ff; color: #1e40af; padding: 2px 6px; border-radius: 4px; font-weight: bold;">가장 핵심적인 시스템 소프트웨어</span>입니다.
+</p>
+<p style="line-height: 1.8;">
+응용 프로그램(JAVA 애플리케이션, 브라우저, 게임 등)이 무작위로 하드웨어 자원을 가져다 쓰면 시스템이 마비되기 때문에, OS가 중간에서 교통정리를 해주는 역할을 합니다. 즉, 하드웨어(하부 구조) 위에 구축되는 소프트웨어 계층의 조율자입니다.
+</p>
+<div style="background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; text-align: center;">
+<div style="max-width: 450px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem; font-weight: bold; font-size: 0.9rem;">
+<div style="background-color: #ecfdf5; color: #065f46; border: 1px solid #10b981; padding: 0.6rem; border-radius: 4px;">사용자 (User)</div>
+<div style="background-color: #f0fdf4; color: #166534; border: 1px solid #22c55e; padding: 0.6rem; border-radius: 4px;">응용 프로그램 (Application - JAVA, 웹 브라우저 등)</div>
+<div style="background-color: #eff6ff; color: #1e40af; border: 1px solid #3b82f6; padding: 0.8rem; border-radius: 4px; box-shadow: inset 0 0 8px rgba(59,130,246,0.15);">🌟 운영체제 (OS - 커널/유저 영역)</div>
+<div style="background-color: #fef2f2; color: #991b1b; border: 1px solid #ef4444; padding: 0.6rem; border-radius: 4px;">하드웨어 (Hardware - CPU, RAM, SSD/HDD)</div>
+</div>
+<small style="color: #94a3b8; font-size: 0.85rem; display: block; margin-top: 0.8rem;">[컴퓨터 시스템의 계층적 구조]</small>
+</div>
+</section>
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #1e3a8a; border-left: 4px solid #1e3a8a; padding-left: 10px; font-size: 1.4rem;">2. 운영체제의 대표적인 종류</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">현재 시장에서 가장 흔히 볼 수 있는 운영체제는 목적과 환경에 따라 뚜렷한 영역을 구축하고 있습니다.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.2rem;">
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.2rem;">
+<h4 style="margin-top: 0; color: #0078d4;">🪟 Windows</h4>
+<p style="font-size: 0.9rem; line-height: 1.6; margin: 0.5rem 0 0 0; color: #475569;">마이크로소프트의 독점 OS로, 전 세계 PC 시장 점유율 1위입니다. 뛰어난 직관적 GUI(그래픽 유저 인터페이스)와 호환성 덕분에 개인용, 게임용 PC의 표준으로 자리 잡았습니다.</p>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.2rem;">
+<h4 style="margin-top: 0; color: #f15a24;">🐧 Linux / Unix</h4>
+<p style="font-size: 0.9rem; line-height: 1.6; margin: 0.5rem 0 0 0; color: #475569;">오픈 소스 기반이며 안정성과 보안성이 극도로 높아 <strong>대부분의 기업 웹 서버, 클라우드 인프라(AWS 등), 백엔드 서버 구동 환경</strong>의 절대적인 표준입니다. 오픈 소스 분파(Ubuntu, CentOS, Rocky Linux 등)가 다양합니다.</p>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.2rem;">
+<h4 style="margin-top: 0; color: #1e293b;">🍏 macOS / iOS</h4>
+<p style="font-size: 0.9rem; line-height: 1.6; margin: 0.5rem 0 0 0; color: #475569;">애플 하드웨어 전용 OS로, 유닉스(Unix) 계열 커널을 기반으로 설계되어 개발 인프라 구성에 유리합니다. 프론트엔드/자바 개발자 및 그래픽 디자이너 사이에서 선호도가 대단히 높습니다.</p>
+</div>
+</div>
+</section>
+<section style="margin-bottom: 2.5rem;">
+<h3 style="color: #1e3a8a; border-left: 4px solid #1e3a8a; padding-left: 10px; font-size: 1.4rem;">3. 면접과 실무에 피가 되는 필수 OS 핵심 키워드</h3>
+<p style="line-height: 1.8; margin-top: 1rem;">특히 JAVA 개발 환경(JVM 멀티스레딩 및 힙 메모리 관리)을 완벽히 이해하기 위해서 운영체제의 다음 세 가지 핵심 메커니즘을 학습해 두는 것을 강력히 추천합니다.</p>
+<div class="book-hint info" style="padding: 1.25rem; border-left: 0.25rem solid #3b82f6; background-color: #f8fafc; border-radius: 0.25rem; margin-top: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.7;">
+<li style="margin-bottom: 0.8rem;">
+<strong>프로세스(Process) vs 스레드(Thread)</strong>
+<br><span style="font-size: 0.9rem; color: #475569;">- <em>프로세스:</em> OS로부터 메모리 공간을 독립적으로 할당받아 실행 중인 프로그램의 단위입니다.</span>
+<br><span style="font-size: 0.9rem; color: #475569;">- <em>스레드:</em> 프로세스 내부에서 자원을 공유하며 실행되는 여러 흐름의 단위입니다. 자바의 멀티스레딩 프로그래밍을 이해하는 핵심 주춧돌입니다.</span>
+</li>
+<li style="margin-bottom: 0.8rem;">
+<strong>교착 상태 (Deadlock)</strong>
+<br><span style="font-size: 0.9rem; color: #475569;">두 개 이상의 스레드나 프로세스가 서로가 가진 자원을 양보 없이 기다리며 작업이 무한정 멈춰버리는 현상입니다. 멀티스레드 환경에서 자바 코드를 설계할 때 반드시 방지해야 하는 상황입니다.</span>
+</li>
+<li style="margin-bottom: 0px;">
+<strong>가상 메모리 (Virtual Memory) 및 페이징 (Paging)</strong>
+<br><span style="font-size: 0.9rem; color: #475569;">실제 RAM 용량보다 큰 프로세스를 실행하기 위해 디바이스 보조기억장치(SSD)의 일부를 메모리처럼 끌어다 쓰는 기술입니다. 메모리 단편화를 방지하는 OS의 지능적인 기법입니다.</span>
+</li>
+</ul>
+</div>
+</section>
+</div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/aieducation/1week/computers/programinglanguage/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>📄 프로그래밍 언어</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/aieducation/book_collection/book/" class="flex align-center">
+        <span>내가 고른 첫 번째 추천 책</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
