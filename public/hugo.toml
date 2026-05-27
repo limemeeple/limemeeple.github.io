@@ -1,0 +1,12 @@
+baseURL = 'https://limemeeple.github.io/'
+theme = 'hugo-book'
+title = """
+라임미플의
+보드게임 비밀기지
+"""
+
+LanguageCode = 'ko-kr'
+defaultContentLanguage = 'ko'
+
+[params]
+googleAnalytics = "G-B577GZKLR0"

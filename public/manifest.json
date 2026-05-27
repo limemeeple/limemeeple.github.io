@@ -1,6 +1,6 @@
 {
-  "name": "My New Hugo Project",
-  "short_name": "My New Hugo Project",
+  "name": "LimeMeeple",
+  "short_name": "LimeMeeple",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
